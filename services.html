@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gelo's Ice Cream</title>
+    <style>
+        /* Reset some default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+
+        /* Header styles */
+        header {
+            background-color: #ff5733;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .logo-container img {
+            height: 50px;
+            width: auto;
+        }
+
+        nav ul {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ffecdc;
+        }
+
+        /* Main content styles */
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: justify;
+        }
+
+        .section-heading {
+            font-size: 2.5rem;
+            color: #ff5733;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .section-heading::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: #ff5733;
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .section-content {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 35px;
+            background-color: #ff5733;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #ff7f6e;
+        }
+
+        /* Loading screen styles */
+        .loading-container {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 9999;
+        }
+
+        .loading-spinner {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 5px solid #f3f3f3; /* Light grey */
+            border-top: 5px solid #3498db; /* Blue */
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 2s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo-container">
+        <img src="LOGO123.jpg" alt="Gelo's Ice Cream Logo">
+    </div>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="newwebsite.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="menu.html">Menu</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="content">
+    <h1 class="section-heading">ABOUT OUR PRODUCT</h1>
+    <p class="section-content">
+        At Gelo's Ice Cream in Muntinlupa, we go beyond just scooping up delectable flavors; we offer a range of services designed to enhance your experience and cater to your sweet cravings.
+    </p>
+    <p class="section-content">
+        1. <strong>Ice Cream Scoops:</strong> Indulge in our wide array of classic and innovative ice cream flavors, expertly scooped into cones or cups. From timeless favorites to seasonal specialties, there's always something new to discover at Gelo's.
+    </p>
+    <p class="section-content">
+        2. <strong>Custom Creations:</strong> Unleash your creativity with our custom ice cream creations. Choose your favorite flavors, toppings, and sauces to craft a personalized sundae or milkshake that's uniquely yours.
+    </p>
+    <p class="section-content">
+        3. <strong>Ice Cream Catering:</strong> Elevate your events with Gelo's Ice Cream Catering services. Whether you're hosting a birthday party, wedding, or corporate gathering, our team will bring the sweet treats to you, ensuring that your guests are treated to a memorable dessert experience.
+    </p>
+    <p class="section-content">
+        4. <strong>Ice Cream Cakes:</strong> Celebrate life's special moments with our decadent ice cream cakes. Perfect for birthdays, anniversaries, or any occasion worth commemorating, our handcrafted cakes are sure to impress with layers of creamy goodness and irresistible flavor combinations.
+    </p>
+    <p class="section-content">
+        5. <strong>Take-Home Tubs:</strong> Can't get enough of Gelo's? Take the sweetness home with you! Our take-home tubs allow you to enjoy your favorite flavors anytime, anywhere, whether you're cuddled up on the couch or hosting a cozy gathering with loved ones.
+    </p>
+    <p class="section-content">
+        6. <strong>Gift Cards:</strong> Spread the joy of ice cream with Gelo's gift cards. The perfect present for any ice cream enthusiast, our gift cards let your friends and family indulge in their favorite treats whenever the craving strikes.
+    </p>
+    <div>
+        <!-- Add onclick event to trigger loading screen -->
+        <a id="readMoreBtn" class="btn" href="https://www.facebook.com/profile.php?id=61557938788406&sk=about" onclick="showLoadingScreen()">Read more</a>
+    </div>
+</div>
+
+<!-- Loading container -->
+<div id="loadingContainer" class="loading-container">
+    <div class="loading-spinner"></div>
+</div>
+
+<script>
+    function showLoadingScreen() {
+        // Show loading container
+        document.getElementById('loadingContainer').style.display = 'block';
+    }
+</script>
+
+</body>
+</html>
